@@ -14,3 +14,10 @@
 #submit-button:hover {
     background-color: gold;
 }
+
+.card{ 
+    border-color: white;
+}
+.card:hover {
+    border-color: black;
+}
