@@ -1,0 +1,16 @@
+.jumbotron {
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+#header, #navbar-header {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.navbar, #submit-button {
+    background-color: rgb(255, 255, 108)
+}
+
+#submit-button:hover {
+    background-color: gold;
+}
