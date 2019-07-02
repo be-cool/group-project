@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Group Project</title>
+    <title>Event Finder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar bg">
+        <a class="navbar-brand" id="navbar-header" href="#">EVENT FINDER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Favorites</a>
+                <a class="nav-item nav-link" href="#">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4" id="header">EVENT FINDER</h1>
+            <h5>Check out what is going on near you</h5>
+            <br>
+            <p class="lead"></p>
+        </div>
+        <!-- adding a row with two columns for the search containers within the jumbotron -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- adding the bootstrap form for a date that includes a dropdown calendar -->
+                    <div class="form-group row">
+                        <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                        <div class="col-8 date">
+                            <input class="form-control" type="date" value="" id="example-date-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- starting with this dropdown form of 3 different cities at least as a starting point as opposed to typing in whatever
+    city the user wants to look up - open to changing theis -->
+                    <div class="input-group">
+                        <select class=" col-8 custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+              <option selected>Choose Location...</option>
+              <option value="1">Philadelphia</option>
+              <option value="2">New York</option>
+              <option value="3">Washington D.C.</option>
+              <option value="4">Boston</option>
+            </select>
+                        <!-- button to click once the user has filled out the first two fields -->
+                        <div class="input-group-append">
+                            <button class="btn" id="submit-button" type="button">Find Events</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="assets/css/images/philadelphia.png" class="card-img-top" alt="phila">
+                    <div class="card-body">
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="assets/css/images/DC.jpg" class="card-img-top" alt="washington-dc">
+                    <div class="card-body">
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="assets/css/images/boston.jpg" class="card-img-top" alt="boston">
+                    <div class="card-body">
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="assets/css/images/nyc.jpeg" class="card-img-top" alt="nyc">
+                    <div class="card-body">
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
