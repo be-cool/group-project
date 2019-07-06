@@ -1,7 +1,7 @@
 
 //  Eventful API config:
 function efConfig() {
-
+    console.log(1)
     var efKey = "wDFFpKBkf7q72vwh";
     var efLocation = "San Diego"
     var efQueryURL = "http://api.eventful.com/json/events/search?app_key=" + efKey + "&location=" + efLocation;
