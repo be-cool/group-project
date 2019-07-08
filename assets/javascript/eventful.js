@@ -30,9 +30,9 @@ function efConfig() {
                     // image: response.events.event[i].image
                 }
                 // 1. Make Card Div
-                var eventCard = $("<div class='card'>");
+                var eventCard = $("<div class='card col-sm-3'>");
                 // var eventCard = $("<h5>Hello Wolrd</h5>");
-                var eventCardBody = $("<div class='card-body col-sm-3'>");
+                var eventCardBody = $("<div class='card-body'>");
                 $("#data").append(eventCard);
                 eventCard.append(eventCardBody);
 
