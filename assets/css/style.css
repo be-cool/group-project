@@ -17,7 +17,12 @@
 
 .card{ 
     border-color: white;
+    /* width: 18rem; */
 }
 .card:hover {
     border-color: black;
+}
+
+img{
+    height: 150px;
 }

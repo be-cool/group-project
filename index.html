@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event Finder</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </head>
 
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar bg">
         <a class="navbar-brand" id="navbar-header" href="#">EVENT FINDER</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
@@ -53,16 +59,11 @@
                     <!-- starting with this dropdown form of 3 different cities at least as a starting point as opposed to typing in whatever
     city the user wants to look up - open to changing theis -->
                     <div class="input-group">
-                        <select class=" col-8 custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-              <option selected>Choose Location...</option>
-              <option value="1">Philadelphia</option>
-              <option value="2">New York</option>
-              <option value="3">Washington D.C.</option>
-              <option value="4">Boston</option>
-            </select>
+                        <input id="location-input" class="form-control" type="text" placeholder="Location">
                         <!-- button to click once the user has filled out the first two fields -->
                         <div class="input-group-append">
-                            <button class="btn" id="submit-button" type="button">Find Events</button>
+                            <button class="btn" id="submit-button" type="button">Find
+                                Events</button>
                         </div>
                     </div>
                 </div>
@@ -76,7 +77,8 @@
                 <div class="card">
                     <img src="assets/css/images/philadelphia.png" class="card-img-top" alt="phila">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
+                            cities - or something like that</p>
                     </div>
                 </div>
             </div>
@@ -84,7 +86,8 @@
                 <div class="card">
                     <img src="assets/css/images/DC.jpg" class="card-img-top" alt="washington-dc">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
+                            cities - or something like that</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +95,8 @@
                 <div class="card">
                     <img src="assets/css/images/boston.jpg" class="card-img-top" alt="boston">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
+                            cities - or something like that</p>
                     </div>
                 </div>
             </div>
@@ -100,17 +104,24 @@
                 <div class="card">
                     <img src="assets/css/images/nyc.jpeg" class="card-img-top" alt="nyc">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these cities - or something like that</p>
+                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
+                            cities - or something like that</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row card-columns" id="data"></div>
     </div>
+
+
     </div>
     <!-- jquery CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- firebase.js link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- firebase javascript link -->
     <script type="text/javascript" src="assets/javascript/firebase.js"></script>
+    <!-- eventful javascript link -->
+    <script src="./assets/javascript/eventful.js"></script>
 </body>
 
 </html>
