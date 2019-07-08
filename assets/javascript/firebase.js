@@ -23,16 +23,5 @@ var config = {
     };
     database.ref("/user-search").push(findBtn);
     console.log(findBtn.date);
-  });
+  }); 
   
-  database.ref().on("child_added", function(childSnapshot) {
-      console.log(childSnapshot.val());
-     var going = childSnapshot.val().attending;
-     console.log(going);
-     $("#going-btn").append(going);
-     
-    },
-    function(errorObject) {
-      console.log("The read failed: " + errorObject.code);
-    }
-  );

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // function ticketmaster(keyWord, city) {
 
 var keyWord = "football";
@@ -34,5 +32,4 @@ $.ajax({
             //     description: []
             //     }
 
-            )};
->>>>>>> master
+    });
