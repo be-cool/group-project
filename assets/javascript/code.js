@@ -21,7 +21,7 @@ $.ajax({
             //4.City Name
             console.log(response._embedded.events[0]._embedded.venues[0].city.name);
             //5.Description
-            console.log()
+            console.log();
 
             // City Nane = 
             // var event = {
@@ -32,4 +32,4 @@ $.ajax({
             //     description: []
             //     }
 
-            // }
+            )};
