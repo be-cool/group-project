@@ -12,16 +12,16 @@ var config = {
   
   var database = firebase.database();
   
-  $("#submit-button").on("click", function(event) {
-    event.preventDefault();
-    var dateSearch = $("#example-date-input").val().trim();
-    var citySearch = $("#inputGroupSelect04").val().trim();
+  // $("#submit-button").on("click", function(event) {
+  //   event.preventDefault();
+  //   var dateSearch = $("#example-date-input").val().trim();
+  //   var citySearch = $("#inputGroupSelect04").val().trim();
   
-    var findBtn = {
-     date: dateSearch,
-     location: citySearch
-    };
-    database.ref("/user-search").push(findBtn);
-    console.log(findBtn.date);
-  }); 
+  //   var findBtn = {
+  //    date: dateSearch,
+  //    location: citySearch
+  //   };
+  //   database.ref("/user-search").push(findBtn);
+  //   console.log(findBtn.date);
+  // }); 
   
