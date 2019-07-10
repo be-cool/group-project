@@ -47,13 +47,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <!-- adding the bootstrap form for a date that includes a dropdown calendar -->
-                    <div class="form-group row">
-                        <label for="example-date-input" class="col-2 col-form-label">Date</label>
-                        <div class="col-8 date">
-                            <input class="form-control" type="date" value="" id="example-date-input">
-                        </div>
-                    </div>
+                    <input type="text" name="datefilter" value="" id="daterange"/>
                 </div>
                 <div class="col">
                     <!-- starting with this dropdown form of 3 different cities at least as a starting point as opposed to typing in whatever
@@ -118,6 +112,13 @@
     <!-- jquery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
     <!-- firebase javascript link -->
     <script type="text/javascript" src="assets/javascript/firebase.js"></script>
     <!-- eventful javascript link -->
