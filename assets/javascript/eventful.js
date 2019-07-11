@@ -1,4 +1,7 @@
 
+var startDate = '';
+var endDate = '';
+
 function dateSelector() {
 
     $('input[name="datefilter"]').daterangepicker({
@@ -10,8 +13,8 @@ function dateSelector() {
 
     $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
         $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-        console.log(picker.startDate.format('YYYYMMDD'));
-        console.log(picker.endDate.format('YYYYMMDD'));
+        startDate = picker.startDate.format('YYYYMMDD');
+        endDate = picker.endDate.format('YYYYMMDD');
     });
 
     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
@@ -22,6 +25,7 @@ function dateSelector() {
 dateSelector();
 
 
+
 $("#submit-button").on("click", function (event) {
     event.preventDefault();
     //  Eventful API config:
@@ -29,25 +33,30 @@ $("#submit-button").on("click", function (event) {
         // console.log(1)
         var efKey = "wDFFpKBkf7q72vwh";
         var efLocation = $("#location-input").val();
+        if (efLocation === "") {
+            alert("enter a city");
+        }
 
-        var efDate = $("#example-date-input").val();
-        console.log(efDate);
+        var efDate = startDate + "00" + "-" + endDate + "00";
+
+        
 
         //  Supported: "All", "Future", "Past", "Today", "Last Week", "This Week", "Next week", 
         //  and months by name, e.g. "October". Exact ranges can be specified the form 'YYYYMMDD00-YYYYMMDD00', 
         //  for example '2012042500-2012042700';    ---this is a date range, will need to integrate search to ask for range---
         //  the last two digits of each date in this format are ignored.
 
-        // var efQueryURlDate = "http://api.eventful.com/json/events/search?app_key=" + efKey + "&date=" + 
 
         //  Current date search value is in format 
 
 
-        var efQueryURL = "http://api.eventful.com/json/events/search?app_key=" + efKey + "&location=" + efLocation;
+        var efQueryURL = "http://api.eventful.com/json/events/search?app_key=" + efKey + "&location=" + efLocation + "&t=" + efDate;
 
         // console.log(efQueryURL);
 
         // console.log(efLocation);
+
+
 
 
         $.ajax({
