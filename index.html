@@ -35,32 +35,22 @@
     </nav>
     <!-- jumbotron -->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4" id="header">EVENT FINDER</h1>
-            <h5>Check out what is going on near you</h5>
-            <br>
-            <p class="lead"></p>
-        </div>
-        <!-- adding a row with two columns for the search containers within the jumbotron -->
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <input type="text" name="datefilter" value="" id="daterange"/>
-                </div>
-                <div class="col">
-                    <!-- starting with this dropdown form of 3 different cities at least as a starting point as opposed to typing in whatever
-    city the user wants to look up - open to changing theis -->
-                    <div class="input-group">
-                        <input id="location-input" class="form-control" type="text" placeholder="Location">
-                        <!-- button to click once the user has filled out the first two fields -->
-                        <div class="input-group-append">
-                            <button class="btn" id="submit-button" type="button">Find
-                                Events</button>
-                        </div>
-                    </div>
-                </div>
+        <h1 class="display-4" id="header">EVENT FINDER</h1>
+        <p class="lead">Check out what is going on near you</p>
+        <hr class="my-4">
+
+        <!-- Input Group -->
+        <form class="form-inline justify-content-center">
+            <div class="form-group mb-2">
+                <label for="input-date-range">Date Range</label>
+                <input class="form-control form-control-lg" type="text" name="datefilter" value="" id="daterange" placeholder="Date Range"/>
             </div>
-        </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="location-input">Location</label>
+                <input type="text" class="form-control form-control-lg" id="location-input" placeholder="Location">
+            </div>
+            <button id="submit-button" type="submit" class="btn btn-lg mb-2">Find Events</button>
+        </form>
     </div>
 
     <div class="container">
@@ -102,15 +92,15 @@
                 </div>
             </div>
         </div>
+
         <div class="row card-columns" id="data"></div>
+        <div class="row card-columns" id="data2"></div>
     </div>
 
 
     </div>
     <!-- jquery CDN -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
