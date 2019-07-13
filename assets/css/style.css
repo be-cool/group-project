@@ -1,28 +1,52 @@
+body {
+    background: url("./images/CBP.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+ }
+
+ img{
+     height: 150px;
+ }
+ 
+ label {
+     padding-right: 5px;
+ }
+ 
 .jumbotron {
     background-color: lightskyblue;
     text-align: center;
+    /* padding-bottom: 5px; */
+    padding: 10px;
 }
 
 #header, #navbar-header {
     font-family: 'Permanent Marker', cursive;
 }
 
-.navbar, #submit-button {
-    background-color: rgb(255, 255, 108)
-}
 
 #submit-button:hover {
     background-color: gold;
 }
 
-.card{ 
+.navbar, #submit-button, .quick-search {
+    background-color: rgb(255, 255, 108);
+    color: black;
+}
+
+.card { 
     border-color: white;
     /* width: 18rem; */
+    /* padding-top: 10px; */
+    /* margin: 5px; */
 }
+
 .card:hover {
     border-color: black;
 }
 
-img{
-    height: 150px;
+.card-deck, .card-columns {
+    margin-bottom: 10px;
 }
