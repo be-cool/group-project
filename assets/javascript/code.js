@@ -32,15 +32,15 @@ $("#submit-button").on("click", function(event) {
             var keyWord = "";
             var postalCode = "";
             var milesAway = "";
-        //     var inputdate = $("#example-date-input").val();
-        //     console.log("inputdate", inputdate)
-        //     var dateTime = moment(inputdate);
+            // var inputdate = $("#example-date-input").val();
+            // console.log("inputdate", inputdate)
+            // var dateTime = moment(inputdate);
 
-        //     var startDateTime = moment(inputdate).subtract(1, "days").format("YYYY-MM-DDT23:59:59Z");
-        //     var endDateTime = moment(inputdate).format("YYYY-MM-DDT23:59:59Z");
+            // var startDateTime = moment(inputdate).subtract(1, "days").format("YYYY-MM-DDT23:59:59Z");
+            // var endDateTime = moment(inputdate).format("YYYY-MM-DDT23:59:59Z");
             // var startDateTime = "";
-        //     console.log("inside click start date time",startDateTime); //this is what it wants "2019-07-10T20:26:00Z" "2019-07-17T23:59:59-04:00"
-        //     console.log("inside click end date time", endDateTime);
+            // console.log("inside click start date time",startDateTime); //this is what it wants "2019-07-10T20:26:00Z" "2019-07-17T23:59:59-04:00"
+            // console.log("inside click end date time", endDateTime);
             // console.log("inside click start date time", moment(startDateTime).format("YYYY-MM-DDT23:59:59Z"));
             // console.log("inside click end date time", moment(endDateTime).format("YYYY-MM-DDT23:59:59Z"));
             var city = $("#location-input").val();
@@ -48,6 +48,16 @@ $("#submit-button").on("click", function(event) {
             // var efQueryURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=" + apiKey + "&locale=*&city=" + city + "&startEndDateTime=" + startDateTime;
             var efQueryURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=" + apiKey + "&startDateTime=" + startDateTime + "&endDateTime=" + endDateTime + "&city=" + city;
             // console.log(efQueryURL);
+
+            // If City is Null exit...
+            if (city === "") {
+                // console.log("Exit TicketMaster Call");
+                return;
+            }
+
+            // Clear any previously loaded TicketMaster Cards...
+            clearTicketMasterCards();
+
             $.ajax({
                 url: efQueryURL,
                 method: "GET"
@@ -99,3 +109,7 @@ $("#submit-button").on("click", function(event) {
         }
         tmConfig()
     });
+
+function clearTicketMasterCards() {
+    $("#data").empty();
+}
