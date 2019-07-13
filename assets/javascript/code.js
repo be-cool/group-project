@@ -47,7 +47,7 @@ $("#submit-button").on("click", function(event) {
             // var efQueryURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=" + apiKey + "&keyword=" + keyWord + "&postalCode=" + postalCode + "&radius=" + milesAway + "&locale=*&startDateTime=" + startDateTime + "&city=" + city;
             // var efQueryURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=" + apiKey + "&locale=*&city=" + city + "&startEndDateTime=" + startDateTime;
             var efQueryURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=" + apiKey + "&startDateTime=" + startDateTime + "&endDateTime=" + endDateTime + "&city=" + city;
-            // console.log(efQueryURL);
+            console.log(efQueryURL);
 
             // If City is Null exit...
             if (city === "") {
@@ -75,9 +75,13 @@ $("#submit-button").on("click", function(event) {
                     }
 
                     // 1. Make Card Div
-                    var eventCard = $("<div class='card col-sm-3'>");
+                    var cardWrapper = $("<div class='col-sm-3'>");
+                    // var eventCard = $("<div class='card col-sm-3'>");
+                    var eventCard = $("<div class='card'>");
                     var eventCardBody = $("<div class='card-body'>");
-                    $("#data").append(eventCard);
+                    // $("#data").append(eventCard);
+                    $("#data").append(cardWrapper);
+                    cardWrapper.append(eventCard);
 
                     // Loop through Object Attributes, to get display card data
                     for (key in event) {
