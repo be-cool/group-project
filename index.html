@@ -40,16 +40,25 @@
         <hr class="my-4">
 
         <!-- Input Group -->
-        <form class="form-inline justify-content-center">
+        <form class="form-inline justify-content-center needs-validation" novalidate>
             <div class="form-group mb-2">
                 <label for="input-date-range">Date Range</label>
-                <input class="form-control form-control-lg" type="text" name="datefilter" value="" id="daterange" placeholder="Date Range"/>
+                <input class="form-control form-control-lg" type="text" name="datefilter" value="" id="daterange" placeholder="Date Range" required/>
+                <!-- Validation Msg -->
+                <div class="invalid-feedback">
+                    Please provide a date range.
+                </div>
             </div>
             <div class="form-group mx-sm-3 mb-2">
                 <label for="location-input">Location</label>
-                <input type="text" class="form-control form-control-lg" id="location-input" placeholder="Location">
+                <input type="text" class="form-control form-control-lg" id="location-input" placeholder="Location" required>
+                <!-- Validation Msg -->
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
             </div>
             <button id="submit-button" type="submit" class="btn btn-lg mb-2">Find Events</button>
+            <!-- <button id="submit-button" class="btn btn-lg mb-2" type="submit">Validate Test</button> -->
         </form>
     </div>
 
@@ -59,8 +68,9 @@
                 <div class="card">
                     <img src="assets/css/images/philadelphia.png" class="card-img-top" alt="phila">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
-                            cities - or something like that</p>
+                        <h5 class="card-title">Philadelphia</h5>
+                        <p class="card-text">Click to search for upcoming events in this city!</p>
+                        <button type="button" class="btn btn-primary quick-search" data-city="Philadelphia">Quick Search</button>
                     </div>
                 </div>
             </div>
@@ -68,8 +78,9 @@
                 <div class="card">
                     <img src="assets/css/images/DC.jpg" class="card-img-top" alt="washington-dc">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
-                            cities - or something like that</p>
+                            <h5 class="card-title">Washington DC</h5>
+                            <p class="card-text">Click to search for upcoming events in this city!</p>
+                            <button type="button" class="btn btn-primary quick-search" data-city="DC">Quick Search</button>
                     </div>
                 </div>
             </div>
@@ -77,8 +88,9 @@
                 <div class="card">
                     <img src="assets/css/images/boston.jpg" class="card-img-top" alt="boston">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
-                            cities - or something like that</p>
+                        <h5 class="card-title">Boston</h5>
+                        <p class="card-text">Click to search for upcoming events in this city!</p>
+                        <button type="button" class="btn btn-primary quick-search" data-city="Boston">Quick Search</button>
                     </div>
                 </div>
             </div>
@@ -86,8 +98,9 @@
                 <div class="card">
                     <img src="assets/css/images/nyc.jpeg" class="card-img-top" alt="nyc">
                     <div class="card-body">
-                        <p class="card-text">Want to pull in some auto filled events that are most popular in these
-                            cities - or something like that</p>
+                        <h5 class="card-title">New York City</h5>
+                        <p class="card-text">Click to search for upcoming events in this city!</p>
+                        <button type="button" class="btn btn-primary quick-search" data-city="NYC">Quick Search</button>
                     </div>
                 </div>
             </div>
@@ -112,6 +125,38 @@
     <!-- eventful javascript link -->
     <script src="./assets/javascript/eventful.js"></script>
     <script src="./assets/javascript/code.js"></script>
+
+    <!-- Validation -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {'use strict';window.addEventListener('load', function() {
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                $("#submit-button").on("click", function (event) {
+                    console.log("Validate FTW"); // Test if we get here
+                    if (form.checkValidity() === false) {
+                        console.log("Inside Check Validity block");
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } form.classList.add('was-validated');
+                });
+                
+                // DJF - Couldn't get this to work for some reason. Commented out and went w/Jquery which worked
+                // form.addEventListener('submit', function(event) {
+                //     console.log("Submt Clicked - Validate"); // Test if we get here
+                //     if (form.checkValidity() === false) {
+                //         event.preventDefault();
+                //         event.stopPropagation();
+                //     }
+                //     form.classList.add('was-validated');
+                // }, false);
+            });
+            }, false);
+        })();
+    </script>
 </body>
 
 </html>
