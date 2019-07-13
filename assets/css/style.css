@@ -31,6 +31,11 @@ body {
     background-color: gold;
 }
 
+#quick-search-div {
+    /* padding: 5px; */
+    margin-bottom: 5px;
+}
+
 .navbar, #submit-button, .quick-search {
     background-color: rgb(255, 255, 108);
     color: black;
