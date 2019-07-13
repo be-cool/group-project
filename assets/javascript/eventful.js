@@ -39,7 +39,7 @@ $("#submit-button").on("click", function (event) {
         //  the last two digits of each date in this format are ignored.
         
         //  Current date search value is in format 
-        var efQueryURL = "http://api.eventful.com/json/events/search?app_key=" + efKey + "&location=" + efLocation + "&t=" + efDate;
+        var efQueryURL = "https://api.eventful.com/json/events/search?app_key=" + efKey + "&location=" + efLocation + "&t=" + efDate;
         // console.log(efQueryURL);
         
         // If City is Null exit...
@@ -205,16 +205,16 @@ function QuickSearch() {
 function queryBuilderQuickSearch(city) {
     switch(city) {
         case "Philadelphia":
-            return "http://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=Philadelphia"
+            return "https://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=Philadelphia"
             break;
         case "DC":
-            return "http://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=Washington%20DC"
+            return "https://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=Washington%20DC"
           break;
         case "Boston":
-            return "http://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=Boston"
+            return "https://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=Boston"
             break;
         case "NYC":
-            return "http://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=New%20York%20City"
+            return "https://api.eventful.com/json/events/search?app_key=wDFFpKBkf7q72vwh&location=New%20York%20City"
             break;
         default:
             return ""
