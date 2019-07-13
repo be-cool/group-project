@@ -70,10 +70,13 @@ $("#submit-button").on("click", function (event) {
                     }
 
                     // 1. Make Card Div
-                    var eventCard = $("<div class='card col-sm-3'>");
+                    var cardWrapper = $("<div class='col-sm-3'>");
+                    var eventCard = $("<div class='card'>");
                     var eventCardBody = $("<div class='card-body'>");
 
-                    $("#data2").append(eventCard);
+                    // $("#data2").append(eventCard);
+                    $("#data2").append(cardWrapper);
+                    cardWrapper.append(eventCard);
                     
                     // Loop through Object Attributes, to get display card data
                     for (key in eventfulData) {
@@ -156,10 +159,13 @@ function QuickSearch() {
                 }
 
                 // 1. Make Card Div
-                var eventCard = $("<div class='card col-sm-3'>");
+                var cardWrapper = $("<div class='col-sm-3'>");
+                var eventCard = $("<div class='card'>");
                 var eventCardBody = $("<div class='card-body'>");
 
-                $("#data2").append(eventCard);
+                $("#data2").append(cardWrapper);
+                cardWrapper.append(eventCard);
+
                 
                 // Loop through Object Attributes, to get display card data
                 for (key in eventfulData) {
