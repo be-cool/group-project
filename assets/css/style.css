@@ -31,15 +31,22 @@ body {
     background-color: gold;
 }
 
-.navbar, #submit-button {
-    background-color: rgb(255, 255, 108)
+.navbar, #submit-button, .quick-search {
+    background-color: rgb(255, 255, 108);
+    color: black;
 }
 
 .card { 
     border-color: white;
     /* width: 18rem; */
+    /* padding-top: 10px; */
+    /* margin: 5px; */
 }
 
 .card:hover {
     border-color: black;
+}
+
+.card-deck, .card-columns {
+    margin-bottom: 10px;
 }
